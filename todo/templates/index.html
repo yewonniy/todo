@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1 class="title">Todo List</h1>
+      <div id="inputWrapper">
+        <input
+          type="text"
+          id="new-todo"
+          placeholder="새로운 할 일을 입력하세요..."
+        />
+        <button id="add-todo">추가</button>
+      </div>
+      <h2 class="subTitle">할 일</h2>
+      <ul id="todo-list"></ul>
+
+      <h2 class="subTitle">완료된 일</h2>
+      <ul id="completed-list"></ul>
+    </main>
+    <script src="{% static 'todo/main.js' %}"></script>
+  </body>
+</html>
